@@ -32,10 +32,11 @@ body{
     background: linear-gradient(rgba(39,39,39, 0.6), transparent);
     z-index: 100;
 }
-.nav-logo p{
-    color: white;
+.nav-logo {
+    /* color: white;
     font-size: 25px;
-    font-weight: 600;
+    font-weight: 600; */
+    margin-top: 1rem;
 }
 .nav-menu ul{
     display: flex;
