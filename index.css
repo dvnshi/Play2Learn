@@ -153,6 +153,7 @@ html,body{
 	height: 150px;
 	width: 250px;
 	margin: 30px 0px 10px 100px;
+  /* margin-left: 12px ; */
 }
 .octo img{
 	height: 90%;
@@ -182,6 +183,7 @@ html,body{
 	height: 500px;
 	width: 500px;
 	top: 30%;
+  margin-left: 20px;
 }
 #image img{
 	height: 100%;
