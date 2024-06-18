@@ -38,6 +38,9 @@ body{
     font-weight: 600; */
     margin-top: 1rem;
 }
+img{
+    height: 80px;
+}
 .nav-menu ul{
     display: flex;
 }
@@ -223,6 +226,10 @@ header{
     .nav-menu-btn i:hover{
         background: rgba(255, 255, 255, 0.15);
     }
+    img{
+        height: 65px;
+        margin-top: -0.1rem;
+    }
 }
 @media only screen and (max-width: 540px) {
     .wrapper{
@@ -240,4 +247,8 @@ header{
         flex-direction: column;
        gap:0;
       }
+      img{
+        height: 60px;
+        margin-top: 0.1rem;
+    }
 }
