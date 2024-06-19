@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play2Learn Streaks</title>
+    <link rel="stylesheet" href="./streak.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+</head>
+<body>
+        <div class="big_container">
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+    </div>
+
+
+
+    <header>
+        <h1>Play2Learn</h1>
+    </header>
+
+
+    <main>
+        <div id="container">
+            <!-- Left side for gif and animation -->
+             <!-- <button class="button-20" role="button">BACK <-</button> -->
+            <div id="left-side"></div>
+
+            <!-- Streak Calendar in the middle -->
+            <section id="calendar-container">
+                <h2>Streak Calendar View</h2>
+                <div id="calendar"></div>
+                <div id="full-calendar" class="hidden"></div>
+            </section>
+
+            <!-- Right side for streak info and challenge -->
+            <section id="right-side">
+                <div id="streak-info">
+                    <div class="streak-card">
+                        <i class="bi bi-fire"></i>
+                        <p><span id="current-streak">0</span> days<br>Current streak</p>
+                    </div>
+                    <div class="streak-card">
+                        <i class="bi bi-flag"></i>
+                        <p><span id="next-milestone">1100</span> days<br>Next milestone</p>
+                    </div>
+                </div>
+                <div id="streak-challenge">
+                    <h2>Streak Challenge</h2>
+                    <div class="progress-bar">
+                        <div class="progress" id="challenge-progress"></div>
+                    </div>
+                    <p>Day <span id="challenge-day">0</span> of 30</p>
+                </div>
+            </section>
+        </div>
+    </main>
+    <script src="./streak.js"></script>
+</body>
+</html>
