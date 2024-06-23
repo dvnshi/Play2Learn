@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Form</title>
     <link rel="stylesheet" href="contact.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../sih-images/Favicon 1.0.png">
     <script
       src="https://kit.fontawesome.com/64d58efce2.js"
       crossorigin="anonymous"
@@ -59,8 +60,11 @@
           <span class="circle one"></span>
           <span class="circle two"></span>
 
-          <form action="index.html" autocomplete="off">
+          <!-- ================FORM========================= -->
+          <form action="https://api.web3forms.com/submit" method="POST" autocomplete="off">
             <h3 class="title">Contact us</h3>
+            <!-- ====================Access_Key=================== -->
+            <input type="hidden" name="access_key" value="578fa229-a614-48df-b0bb-385fa66889fb">
             <div class="input-container">
               <input type="text" name="name" class="input" />
               <label for="">Username</label>
