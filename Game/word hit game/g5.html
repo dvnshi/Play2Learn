@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+
+
+
+/* Adding animation of the random movement of the sea creatures */
+#random{
+    position: absolute;
+    top: 0px;
+    z-index: 2;
+  }
+  #fish {
+    width: 300px;
+    height: 240px;
+    transition: transform 10s ease-in-out;
+    transform: rotateX(30deg);
+  }
+
+
+@keyframes animate{
+    0%{
+         transform: scale(0) translateY(0) rotate(70deg);
+    }
+    100%{
+        transform: scale(1) translateY(-60px) rotate(360deg);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+    body {
+      margin: 0;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+      background: rgb(96, 195, 235);
+    }
+
+    #game-container {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+   
+    }
+    
+     
+     .box {
+      position: absolute;
+      width: 100px;
+      height: 50px;
+      background-color: yellow;
+      color: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    #timer {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      font-size: 20px;
+      color:rgb(0, 0, 0);
+    }
+
+    #score {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      font-size: 20px;
+      color:rgb(0, 0, 0);
+    }
+
+
+
+
+
+
+    @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+/* body{
+	background-color: #3e3b9e;
+    background: linear-gradient(180deg, #f0f0f0, 10%, #e1dbee, 70%, #8B5FE3);
+} */
+html{
+    background-color: #c3b3e2;
+}
+
+.big_container div{
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    animation: 4s linear infinite;
+
+}
+
+div .dot {
+    height: 10px;
+    width: 10px;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    top: 20%;
+    right: 20%;
+  }
+
+  .big_container div:nth-child(1) {
+    top: 20%;
+    left: 20%;
+    animation: animate 8s linear infinite;
+  }
+
+  .big_container div:nth-child(2) {
+    top: 60%;
+    left: 80%;
+    animation: animate 10s linear infinite;
+  }
+
+  .big_container div:nth-child(3) {
+    top: 40%;
+    left: 40%;
+    animation: animate 3s linear infinite;
+  }
+
+  .big_container div:nth-child(4) {
+    top: 66%;
+    left: 38%;
+    animation: animate 7s linear infinite;
+  }
+
+  .big_container div:nth-child(5) {
+    top: 30%;
+    left: 60%;
+    animation: animate 5s linear infinite;
+  }
+  .big_container div:nth-child(6) {
+    top: 90%;
+    left: 10%;
+    animation: animate 9s linear infinite;
+  }
+  .big_container div:nth-child(7) {
+    top: 70%;
+    left: 20%;
+    animation: animate 8s linear infinite;
+  }
+  .big_container div:nth-child(8) {
+    top: 75%;
+    left: 60%;
+    animation: animate 10s linear infinite;
+  }
+  .big_container div:nth-child(9) {
+    top: 50%;
+    left: 50%;
+    animation: animate 6s linear infinite;
+  }
+  .big_container div:nth-child(10) {
+    top: 10%;
+    left: 90%;
+    animation: animate 9s linear infinite;
+  }
+  .big_container div:nth-child(11) {
+    top: 45%;
+    left: 20%;
+    animation: animate 10s linear infinite;
+  }
+  .big_container div:nth-child(12) {
+    top: 20%;
+    left: 70%;
+    animation: animate 7s linear infinite;
+  }
+  .big_container div:nth-child(13) {
+    top: 60%;
+    left: 5%;
+    animation: animate 6s linear infinite;
+  }
+  .big_container div:nth-child(14) {
+    top: 90%;
+    left: 80%;
+    animation: animate 8s linear infinite;
+  }
+  .big_container div:nth-child(15) {
+    top: 10%;
+    left: 40%;
+    animation: animate 5s linear infinite;
+  }
+
+/* Adding animation of the random movement of the sea creatures */
+#random{
+    position: absolute;
+    top: 0px;
+  }
+  #fish {
+    width: 300px;
+    height: 240px;
+    transition: transform 10s ease-in-out;
+    transform: rotateX(30deg);
+  }
+
+
+@keyframes animate{
+    0%{
+         transform: scale(0) translateY(0) rotate(70deg);
+    }
+    100%{
+        transform: scale(1.3) translateY(-100px) rotate(360deg);
+    }
+}
+
+
+
+
+
+
+  </style>
+  <title>Shooting Game</title>
+</head>
+<body>
+
+
+
+
+<!-- Adding animation of the random movement of the sea creatures -->
+<div id="random"><img id="fish" src="oSK-unscreen.gif"></div>
+
+
+
+<!-- bubble -->
+<div class="big_container">
+  <div><span class="dot"></span></div>
+  <div><span class="dot"></span></div>
+  <div><span class="dot"></span></div>
+  <div><span class="dot"></span></div>
+  <div><span class="dot"></span></div>
+  <div><span class="dot"></span></div>
+  <div><span class="dot"></span></div>
+  <div><span class="dot"></span></div>
+  <div><span class="dot"></span></div>
+  <div><span class="dot"></span></div>
+  <div><span class="dot"></span></div>
+  <div><span class="dot"></span></div>
+  <div><span class="dot"></span></div>
+  <div><span class="dot"></span></div>
+  <div><span class="dot"></span></div>  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  <div id="timer">Time: <span id="time-left">30</span> seconds</div>
+  <div id="score">Score: <span id="current-score">0</span></div>
+  <div id="game-container"></div>
+
+
+
+  <audio id="hitSound" src="mixkit-game-ball-tap-2073.wav"></audio>
+  <audio id="gameOverSound" src="mixkit-game-level-completed-2059.wav"></audio>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const gameContainer = document.getElementById('game-container');
+      const timerElement = document.getElementById('time-left');
+      const scoreElement = document.getElementById('current-score');
+
+      let score = 0;
+      let timeLeft = 30; // Set the initial time limit in seconds
+
+      function createBox() {
+        const box = document.createElement('div');
+        box.className = 'box';
+        box.style.left = Math.random() * (window.innerWidth - 100) + 'px';
+        box.style.top = Math.random() * (window.innerHeight - 50) + 'px';
+        box.textContent = generateRandomWord();
+        gameContainer.appendChild(box);
+
+        box.addEventListener('click', function () {
+          score++;
+          gameContainer.removeChild(box);
+
+          updateScore();
+          playHitSound();
+          createBox();
+        });
+
+        setTimeout(() => {
+          gameContainer.removeChild(box);
+          updateScore();
+          createBox();
+        }, 3000);
+      }
+
+      function updateScore() {
+        scoreElement.textContent = score;
+      }
+
+      function generateRandomWord() {
+        const words = ['education', 'marraige', 'sexual assault', 'child labour', 'posco act', 'expression', 'equality', 'freedom', 'Care'];
+        const randomIndex = Math.floor(Math.random() * words.length);
+        return words[randomIndex];
+      }
+
+      function updateTimer() {
+        if (timeLeft > 0) {
+          timeLeft--;
+          timerElement.textContent = timeLeft;
+          setTimeout(updateTimer, 1000);
+        } else {
+          // Game Over
+          timerElement.textContent = '0';
+          console.log('Game Over! Your final score is:', score);
+          playGameOverSound();
+          alert('Time is up! Your final score is: ' + score);
+          gameContainer.innerHTML = ''; // Clear the game container to stop generating new boxes
+        }
+      }
+
+
+
+
+      function playHitSound() {
+        const hitSound = document.getElementById('hitSound');
+        hitSound.play();
+      }
+
+      function playGameOverSound() {
+        const gameOverSound = document.getElementById('gameOverSound');
+        gameOverSound.play();
+      }
+
+
+      // Start the timer
+      updateTimer();
+
+      // Create multiple boxes
+      for (let i = 0; i < 5; i++) {
+        createBox();
+      }
+    });
+
+
+
+
+
+    const fish = document.getElementById('fish');
+
+function getRandomPosition() {
+    const x = Math.random() * (window.innerWidth - fish.clientWidth);
+    const y = Math.random() * (window.innerHeight - fish.clientHeight);
+    return { x, y };
+}
+
+function moveFish() {
+    const currentPosition = { x: fish.offsetLeft, y: fish.offsetTop };
+    const newPosition = getRandomPosition();
+
+    const deltaX = newPosition.x - currentPosition.x;
+    const deltaY = newPosition.y - currentPosition.y;
+
+    const rotation = deltaX < 0 ? ' rotateY(180deg)' : ''; // Rotate only when moving in -X direction
+
+    fish.style.transform = `translate(${newPosition.x}px, ${newPosition.y}px)${rotation}`;
+}
+
+setInterval(moveFish, 10000); // Change the interval as needed
+moveFish(); // Initial placement
+
+
+
+
+
+
+
+
+
+
+
+  </script>
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,308 @@
+<!DOCTYPE html>   
+<html lang="en">
+<head>
+
+<style>    
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: #3398e4;
+  }
+
+  #game-container {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .big_container div {
+    height: 40px;
+    width: 40px;
+  }
+
+  .big_container div .dot {
+    height: 8px;
+    width: 8px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+body{
+font-family: 'Arial', sans-serif;
+background-color:#3398e4;
+text-align: center;
+}
+
+#game-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: yellow;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+button {
+  background-color: #4CAF50;
+  color: whitesmoke;
+
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+/* body{
+	background-color: #3e3b9e;
+    background: linear-gradient(180deg, #f0f0f0, 10%, #e1dbee, 70%, #8B5FE3);
+} */
+
+.big_container div{
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    animation: 4s linear infinite;
+
+}
+
+div .dot {
+    height: 10px;
+    width: 10px;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    top: 20%;
+    right: 20%;
+  }
+
+  .big_container div:nth-child(1) {
+    top: 20%;
+    left: 20%;
+    animation: animate 8s linear infinite;
+  }
+
+  .big_container div:nth-child(2) {
+    top: 60%;
+    left: 80%;
+    animation: animate 10s linear infinite;
+  }
+
+  .big_container div:nth-child(3) {
+    top: 40%;
+    left: 40%;
+    animation: animate 3s linear infinite;
+  }
+
+  .big_container div:nth-child(4) {
+    top: 66%;
+    left: 38%;
+    animation: animate 7s linear infinite;
+  }
+
+  .big_container div:nth-child(5) {
+    top: 30%;
+    left: 60%;
+    animation: animate 5s linear infinite;
+  }
+  .big_container div:nth-child(6) {
+    top: 90%;
+    left: 10%;
+    animation: animate 9s linear infinite;
+  }
+  .big_container div:nth-child(7) {
+    top: 70%;
+    left: 20%;
+    animation: animate 8s linear infinite;
+  }
+  .big_container div:nth-child(8) {
+    top: 75%;
+    left: 60%;
+    animation: animate 10s linear infinite;
+  }
+  .big_container div:nth-child(9) {
+    top: 50%;
+    left: 50%;
+    animation: animate 6s linear infinite;
+  }
+  .big_container div:nth-child(10) {
+    top: 10%;
+    left: 90%;
+    animation: animate 9s linear infinite;
+  }
+  .big_container div:nth-child(11) {
+    top: 45%;
+    left: 20%;
+    animation: animate 10s linear infinite;
+  }
+  .big_container div:nth-child(12) {
+    top: 20%;
+    left: 70%;
+    animation: animate 7s linear infinite;
+  }
+  .big_container div:nth-child(13) {
+    top: 60%;
+    left: 5%;
+    animation: animate 6s linear infinite;
+  }
+  .big_container div:nth-child(14) {
+    top: 90%;
+    left: 80%;
+    animation: animate 8s linear infinite;
+  }
+  .big_container div:nth-child(15) {
+    top: 10%;
+    left: 40%;
+    animation: animate 5s linear infinite;
+  }
+
+
+@keyframes animate{
+    0%{
+         transform: scale(0) translateY(0) rotate(70deg);
+    }
+    100%{
+        transform: scale(1.3) translateY(-100px) rotate(360deg);
+    }
+}
+
+
+
+
+
+
+
+</style>
+
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Legal Detective Agency Game</title>
+</head>
+<body>
+         <div id="game-container">
+           <h1>Welcome to the Legal Detective Agency!</h1>
+
+        <br> 
+           
+        <p id="story">You are a detective on a mission to solve legal cases. Choose your actions wisely!</p>
+        <br>
+        <div id="options-container">
+            <button onclick="startGame()">Start Game</button>
+        </div>
+  </div>
+
+
+ <!-- bubble -->
+ <div class="big_container">
+  <div><span class="dot"></span></div>
+  <div><span class="dot"></span></div>
+  <div><span class="dot"></span></div>
+  <div><span class="dot"></span></div>
+  <div><span class="dot"></span></div>
+  <div><span class="dot"></span></div>
+  <div><span class="dot"></span></div>
+  <div><span class="dot"></span></div>
+  <div><span class="dot"></span></div>
+  <div><span class="dot"></span></div>
+  <div><span class="dot"></span></div>
+  <div><span cl..ass="dot"></span></div>
+  <div><span class="dot"></span></div>
+  <div><span class="dot"></span></div>
+  <div><span class="dot"></span></div>  
+</div>
+
+
+    <script >
+
+// Game logic goes here
+function startGame() {
+    document.getElementById('story').innerHTML = "You receive your first case. A high-profile client needs your help to solve a legal mystery.";
+    document.getElementById('options-container').innerHTML = '<button onclick="investigate()">Investigate</button>';
+}
+
+function investigate() {
+    document.getElementById('story').innerHTML = "You gather evidence and interview witnesses. A lead points to a suspicious businessman that he give a job to a 13th year boy in her factory .";
+    document.getElementById('options-container').innerHTML = '<button onclick="arrest()">Arrest the suspect</button> <button onclick="continueInvestigation()">Continue investigation</button>';
+}
+
+function arrest() {
+    document.getElementById('story').innerHTML = "You make the arrest, but the suspect claims innocence. The case goes to trial.";
+    document.getElementById('options-container').innerHTML = '<button onclick="winTrial()">Present strong evidence and win the trial</button> <button onclick="loseTrial()">Fail to convince the jury</button>';
+}
+
+function continueInvestigation() {
+    document.getElementById('story').innerHTML = "You uncover more clues, but a proper evidence was not getting. The case becomes more challenging.";
+    document.getElementById('options-container').innerHTML = '<button onclick="arrest()">Arrest the new suspect</button> <button onclick="keepInvestigating()">Keep investigating</button>';
+}
+
+function winTrial() {
+    document.getElementById('story').innerHTML = "Congratulations! You successfully solved the case and the client is pleased with your work and also you have the good knoledge of rights.";
+    document.getElementById('options-container').innerHTML = '<button onclick="startGame()">Play Again</button>';
+}
+
+function loseTrial() {
+    document.getElementById('story').innerHTML = "Unfortunately, you couldn't convince the jury. The fair justice was not giving.";
+    document.getElementById('options-container').innerHTML = '<button onclick="startGame()">Try Again</button>';
+}
+
+function keepInvestigating() {
+    document.getElementById('story').innerHTML = "The investigation takes an unexpected turn because the boy is saying due the poor condition of her family he wanted to do job .";
+    document.getElementById('options-container').innerHTML = '<button onclick="continueInvestigation()">Continue investigation</button> <button onclick="arrest()">Make an arrest</button>';
+}
+
+ 
+function ACT() {
+    document.getElementById('story').innerHTML = "But According to child labour act of 1986 it prohibit child workers";
+    document.getElementById('options-container').innerHTML = '<button onclick="ACT()">Continue investigation</button> <button onclick="arrest()">Make an arrest</button>';
+}
+
+ 
+ 
+ 
+
+
+
+    </script>
+</body>
+
+</html>
+
+
+
+
+
