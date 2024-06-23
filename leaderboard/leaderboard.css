@@ -162,7 +162,8 @@ header {
     color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     font-family: 'Lobster', cursive;
-    position: relative;
+    position: absolute;
+    top: 0px;
 }
 
 header h1 {
@@ -187,12 +188,14 @@ main {
     border-radius: 15px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     overflow-y: auto;
+    margin-top: 100px;
 }
 
 .leaderboard {
     display: flex;
     flex-direction: column;
     gap: 15px;
+  
 }
 
 .entry {
@@ -230,4 +233,14 @@ main {
     font-size: 1.5rem;
     font-weight: bold;
     color: #ffd700;
+}
+
+.back-button{
+  background-color: rgb(43, 2, 74);
+  padding: 10px;
+  border-radius: 50%;
+}
+.back-button:hover{
+  transform: scale(1.1);
+  box-shadow: 2px 3px 2px rgb(122, 94, 207);
 }
