@@ -17,7 +17,7 @@ textarea {
   width: 100%;
   min-height: 100vh;
   padding: 2rem;
-  background-color: #edede9;
+  background-color: #ffd6ff;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -37,13 +37,13 @@ textarea {
 }
 
 .contact-form {
-  background-color: #00b4d8;
+  background-color: #9d4edd;
   position: relative;
 }
 
 .circle {
   border-radius: 50%;
-  background: linear-gradient(135deg, transparent 20%, #90e0ef);
+  background: linear-gradient(135deg, transparent 10%, #7b2cbf);
   position: absolute;
 }
 
@@ -66,7 +66,7 @@ textarea {
   position: absolute;
   width: 26px;
   height: 26px;
-  background-color: #00b4d8;
+  background-color: #9d4edd;
   transform: rotate(45deg);
   top: 50px;
   left: -13px;
@@ -138,7 +138,7 @@ textarea.input {
   background-color: #fff;
   border: 2px solid #fafafa;
   font-size: 0.95rem;
-  color: #00b4d8;
+  color: #7b2cbf;
   line-height: 1;
   border-radius: 25px;
   outline: none;
@@ -172,7 +172,7 @@ textarea.input {
   opacity: 0;
   transition: 0.3s;
   height: 5px;
-  background-color: #00b4d8;
+  background-color: #9d4edd;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -204,7 +204,7 @@ textarea.input {
 }
 
 .contact-info .title {
-  color: #00b4d8;
+  color: #5a189a;
 }
 
 .text {
@@ -242,7 +242,7 @@ textarea.input {
   width: 35px;
   height: 35px;
   border-radius: 5px;
-  background: linear-gradient(45deg, #00b4d8, #90e0ef);
+  background: linear-gradient(45deg, #9d4edd, #5a189a);
   color: #fff;
   text-align: center;
   line-height: 35px;
@@ -259,7 +259,7 @@ textarea.input {
   position: absolute;
   width: 110px;
   height: 100px;
-  border: 22px solid #00b4d8;
+  border: 22px solid #9d4edd;
   border-radius: 50%;
   bottom: -77px;
   right: 50px;
@@ -271,7 +271,7 @@ textarea.input {
   width: 500px;
   height: 500px;
   border-radius: 50%;
-  background: linear-gradient(to bottom, #caf0f8, #0077b6);
+  background: linear-gradient(to bottom, #5a189a, #3c096c);
   bottom: 50%;
   right: 50%;
   transform: translate(-40%, 38%);
@@ -282,7 +282,7 @@ textarea.input {
   position: absolute;
   width: 360px;
   height: 360px;
-  background-color: #edede9;
+  background-color: #ffd6ff;
   border-radius: 50%;
   top: calc(50% - 180px);
   left: calc(50% - 180px);
@@ -291,10 +291,10 @@ textarea.input {
 .square {
   position: absolute;
   height: 400px;
-  top: 50%;
-  left: 50%;
+  top: 30%;
+  left: 32%;
   transform: translate(181%, 11%);
-  opacity: 0.2;
+  opacity: 0.4;
 }
 
 @media (max-width: 850px) {
