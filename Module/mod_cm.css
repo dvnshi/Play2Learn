@@ -139,6 +139,7 @@ body {
 #logo {
   height: 110px;
   width: auto;
+  
 }
 header {
   background-color: white;
@@ -156,6 +157,8 @@ header {
   height: 110px;
   width: auto;
   cursor: pointer;
+ 
+  
 }
 
 .nav-icon :hover {
