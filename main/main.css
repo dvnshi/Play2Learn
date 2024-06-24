@@ -164,7 +164,7 @@ body {
 body {
   /* background-color: #c6c4fe;
   background: linear-gradient(180deg, #f0f0f0, 10%, #e1dbee, 70%, #8b5fe3); */
-  background: linear-gradient(
+  /* background: linear-gradient(
     to top,
     #023e8a,
     #0077b6,
@@ -174,7 +174,12 @@ body {
     #90e0ef,
     #ade8f4,
     #caf0f8
-  );
+  ); */
+
+  background-color: #c6c4fe;
+    /* background: linear-gradient(180deg, #f0f0f0, 10%, #e1dbee, 70%, #8B5FE3); */
+    background: linear-gradient(180deg, #f0f0f0, 10%, #e1dbee, 70%, #8B5FE3);
+
 }
 /* bubbles and gradientr background end...*/
 
@@ -268,20 +273,28 @@ body {
 
   cursor: pointer;
   /* box-shadow: 0 0 20px rgba(91, 4, 126, 0.909); */
-  box-shadow: 0 0 20px rgb(0, 0, 0);
+  box-shadow: 0 0 20px rgb(94, 9, 146);
   -webkit-transition: 0.3s;
   -webkit-transition-property: box-shadow, transform;
 }
 
 .flip-card-front {
   background-color: #c6c4fe;
-  background: linear-gradient(
+  /* background: linear-gradient(
     180deg,
     #2eb2ead4,
     10%,
     #fffdffa8,
     70%,
     #19b7cfd6
+  ); */
+  background: linear-gradient(
+    180deg,
+    #a211dbd4,
+    10%,
+    #fffdffa8,
+    70%,
+    #ae54d5d6
   );
 
   transform: rotateY(180deg);
@@ -387,21 +400,22 @@ h3 {
 }
 .sh-icon {
   position: relative;
-  left: 20px;
+  left: 15px;
   top: 9px;
   height: 55px;
   width: auto;
 }
 .sh-text {
   position: relative;
-  left: 80px;
- 
-  bottom: 35px;
+  left: 78px;
+  bottom: 40px;
   color: rgb(23, 6, 148);
   /* font-family: 'Playfair Display', serif; */
   /* font-family: "PT Sans", sans-serif; */
   /* font-family: "Leckerli One", cursive; */
-  font-size: 25px;
+  font-size: 21px;
+  font-weight: bold;
+  
 }
 
 .upside-header {
@@ -447,6 +461,7 @@ h3 {
   position: relative;
   left: 62px;
   bottom: 40px;
+  font-weight: bold;
 }
 /*.uh-icon{
 margin-top: 22px;
@@ -596,7 +611,17 @@ font-size: 20px;
 /* chatbot */
 
 
-
+/* Import Google font - Poppins
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background: whitesmoke;
+} */
 .chatbot-toggler {
   position: fixed;
   bottom: 30px;
@@ -610,10 +635,9 @@ font-size: 20px;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: #000814;
+  background: #240046;
   transition: all 0.2s ease;
 }
-
 body.show-chatbot .chatbot-toggler {
   transform: rotate(90deg);
 }
@@ -634,9 +658,12 @@ body.show-chatbot .chatbot-toggler span:last-child {
   bottom: 90px;
   width: 300px;
   height: 380px;
-  background-image: linear-gradient(#343a40, #495057,#6c757d, #adb5bd,#ced4da, #dee2e6, #e9ecef) ;
+  background-image: linear-gradient(135deg,#3c096c, #5a189a,#7b2cbf, #9d4edd,#c77dff) ;
+  /* background-image: linear-gradient(135deg,#8c8b8d, #675479,#090111, #9d4edd,#c77dff) ; */
+
   border-radius: 15px;
   overflow: hidden;
+  /* -ms-overflow-style: none; */
   opacity: 0;
   pointer-events: none;
   transform: scale(0.5);
@@ -651,14 +678,13 @@ body.show-chatbot .chatbot {
   pointer-events: auto;
   transform: scale(1);
 }
-
 .chatbot header {
   padding: 16px 0;
   position: relative;
   text-align: center;
   color: #fff;
-  background: #000814;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  background: #240046;
+  box-shadow: 0 2px 10px rgba(36, 2, 43, 0.1);
 }
 .chatbot header span {
   position: absolute;
@@ -677,12 +703,12 @@ header h2 {
   padding: 30px 20px 100px;
 }
 .chatbot :where(.chatbox, textarea)::-webkit-scrollbar {
-  width: 6px;
+  width: 0px;
 }
-.chatbot :where(.chatbox, textarea)::-webkit-scrollbar-track {
+/* .chatbot :where(.chatbox, textarea)::-webkit-scrollbar-track {
   background-image: linear-gradient(#343a40, #495057,#6c757d, #adb5bd,#ced4da, #dee2e6, #e9ecef) ;
   border-radius: 25px;
-}
+} */
 .chatbot :where(.chatbox, textarea)::-webkit-scrollbar-thumb {
   background: #ccc;
   border-radius: 25px;
@@ -703,7 +729,7 @@ header h2 {
   text-align: center;
   line-height: 32px;
   align-self: flex-end;
-  background: #000814;
+  background: #10002b;
   border-radius: 4px;
   margin: 0 10px 7px 0;
 }
@@ -714,7 +740,7 @@ header h2 {
   max-width: 75%;
   color: #000;
   font-size: 0.8rem;
-  background: #adb5bd;
+  background: #e0aaff;
 }
 .chatbox .incoming p {
   border-radius: 10px 10px 10px 0;
@@ -725,7 +751,7 @@ header h2 {
 }
 .chatbox .incoming p {
   color: #fff;
-  background: #6c757d;
+  background: #c77dff;
 }
 .chatbot .chat-input {
   display: flex;
@@ -734,7 +760,9 @@ header h2 {
   bottom: 0;
   width: 100%;
   /* height: 15%; */
-  background: #fff;
+  background: #3c096c;
+  
+
   padding: 3px 20px;
   border-top: 1px solid #ddd;
 }
@@ -747,10 +775,14 @@ header h2 {
   max-height: 180px;
   padding: 15px 15px 15px 0;
   font-size: 0.95rem;
+  background: #3c096c;
+  /* background: #827290; */
+
+  color: #fff;
 }
 .chat-input span {
   align-self: flex-end;
-  color: #000;
+  color: #fff;
   cursor: pointer;
   height: 55px;
   display: flex;
