@@ -379,8 +379,8 @@ h3 {
 .logo {
   margin-left: 12px;
   /* border: 2px solid black; */
-  height: 180px;
-  width: 200px;
+  height: 150px;
+  width: 170px;
   
 }
 .logo:hover {
@@ -391,6 +391,8 @@ h3 {
 .sh-box {
   /* border: 2px solid black; */
   color: rgb(96, 118, 143);
+  height: 40px;
+  margin-bottom: 2px;
 }
 .sh-box:hover {
   transform: scale(1.1);
@@ -401,22 +403,31 @@ h3 {
 .sh-icon {
   position: relative;
   left: 15px;
-  top: 9px;
-  height: 55px;
+  top: 1rem;
+  height: 36px;
   width: auto;
 }
 .sh-text {
   position: relative;
   left: 78px;
-  bottom: 40px;
+  bottom: 17px;
   color: rgb(23, 6, 148);
   /* font-family: 'Playfair Display', serif; */
   /* font-family: "PT Sans", sans-serif; */
   /* font-family: "Leckerli One", cursive; */
   font-size: 21px;
   font-weight: bold;
-  
 }
+/* side footer ki css */
+.side-footer{
+  margin-top: 2rem;
+  margin-left: 1rem;
+}
+.side-footer a{
+  text-decoration: none;
+  color: rgba(142, 122, 145, 0.858);
+}
+/* side footer ki css khatam */
 
 .upside-header {
   display: flex;
