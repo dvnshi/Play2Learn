@@ -192,19 +192,4 @@ closeBtn.addEventListener("click", () => document.body.classList.remove("show-ch
 chatbotToggler.addEventListener("click", () => document.body.classList.toggle("show-chatbot"));
 
 // adding sounds to the navbar options 
-        // Select all sh-box elements
-        // const shBoxes = document.querySelectorAll('.sh-box');
-
-        // // Add click event listener to each sh-box
-        // shBoxes.forEach(box => {
-        //     box.addEventListener('click', () => {
-        //         const audio = box.querySelector('audio');
-        //         const href = box.getAttribute('data-href');
-
-        //         audio.play();
-
-        //         audio.onended = () => {
-        //             window.location.href = href;
-        //         };
-        //     });
-        // });
+      
