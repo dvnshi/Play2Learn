@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+
+    <title>Match the Column Game</title>
+    <style>
+
+
+
+
+    /* Your existing styles */
+
+    @media screen and (max-width: 600px) {
+        .game-container {
+            flex-direction: column;
+        }
+
+        .column {
+            margin-bottom: 20px;
+        }
+
+        .drop-target {
+            width: 80px;
+            height: 80px;
+        }
+
+        .item {
+            font-size: 14px;
+            padding: 3px;
+        }
+
+        #score {
+            font-size: 16px;
+        }
+
+        #win-message, #lose-message {
+            font-size: 20px;
+        }
+
+        #restart-button {
+            margin-top: 10px;
+            padding: 8px;
+        }
+    }
+
+
+
+
+
+
+
+
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+            background: rgb(106, 199, 235);
+        }
+
+        .game-container {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px auto;
+        }
+
+        .column {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-style: italic;
+            z-index: 5;
+        }
+
+        .item {
+            cursor: pointer;
+            margin: 10px;
+            padding: 5px;
+            z-index: 5;
+            background: yellow;
+            border: 1px solid black;
+            border-radius: 5px;
+            animation: moveUpDown 8s infinite alternate;
+        }
+
+        .drop-target {
+            border: 2px solid black;
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+        }
+        .matched-item{
+            animation:none;
+        }
+        #match{
+            z-index: 5;
+        }
+
+        #score {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+
+        }
+        #win-message, #lose-message{
+            display: none;
+            font-size: 24px;
+            font-weight: bold;
+            color: green;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        #restart-button {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        @keyframes moveUpDown {
+            from{
+                transform:translateY(-10px);
+            }
+            to{
+                transform:translateY(100px);
+            }
+            
+        }
+
+
+
+
+
+
+        @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+/* body{
+	background-color: #3e3b9e;
+    background: linear-gradient(180deg, #f0f0f0, 10%, #e1dbee, 70%, #8B5FE3);
+} */
+html{
+    background-color: #c3b3e2;
+}
+
+.big_container div{
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    animation: 4s linear infinite;
+
+}
+
+div .dot {
+    height: 10px;
+    width: 10px;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    top: 20%;
+    right: 20%;
+  }
+
+  .big_container div:nth-child(1) {
+    top: 20%;
+    left: 20%;
+    animation: animate 8s linear infinite;
+  }
+
+  .big_container div:nth-child(2) {
+    top: 60%;
+    left: 80%;
+    animation: animate 10s linear infinite;
+  }
+
+  .big_container div:nth-child(3) {
+    top: 40%;
+    left: 40%;
+    animation: animate 3s linear infinite;
+  }
+
+  .big_container div:nth-child(4) {
+    top: 66%;
+    left: 38%;
+    animation: animate 7s linear infinite;
+  }
+
+  .big_container div:nth-child(5) {
+    top: 30%;
+    left: 60%;
+    animation: animate 5s linear infinite;
+  }
+  .big_container div:nth-child(6) {
+    top: 90%;
+    left: 10%;
+    animation: animate 9s linear infinite;
+  }
+  .big_container div:nth-child(7) {
+    top: 70%;
+    left: 20%;
+    animation: animate 8s linear infinite;
+  }
+  .big_container div:nth-child(8) {
+    top: 75%;
+    left: 60%;
+    animation: animate 10s linear infinite;
+  }
+  .big_container div:nth-child(9) {
+    top: 50%;
+    left: 50%;
+    animation: animate 6s linear infinite;
+  }
+  .big_container div:nth-child(10) {
+    top: 10%;
+    left: 90%;
+    animation: animate 9s linear infinite;
+  }
+  .big_container div:nth-child(11) {
+    top: 45%;
+    left: 20%;
+    animation: animate 10s linear infinite;
+  }
+  .big_container div:nth-child(12) {
+    top: 20%;
+    left: 70%;
+    animation: animate 7s linear infinite;
+  }
+  .big_container div:nth-child(13) {
+    top: 60%;
+    left: 5%;
+    animation: animate 6s linear infinite;
+  }
+  .big_container div:nth-child(14) {
+    top: 90%;
+    left: 80%;
+    animation: animate 8s linear infinite;
+  }
+  .big_container div:nth-child(15) {
+    top: 10%;
+    left: 40%;
+    animation: animate 5s linear infinite;
+  }
+
+/* Adding animation of the random movement of the sea creatures */
+#random{
+    position: absolute;
+    top: 0px;
+    z-index: 2;
+  }
+  #fish {
+    width: 300px;
+    height: 240px;
+    transition: transform 10s ease-in-out;
+    transform: rotateX(30deg);
+  }
+
+
+@keyframes animate{
+    0%{
+         transform: scale(0) translateY(0) rotate(70deg);
+    }
+    100%{
+        transform: scale(1.3) translateY(-100px) rotate(360deg);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+<div id="match">
+<h1 >Match the Column Game </h1>
+</div>
+
+
+
+
+
+
+<!-- bubble -->
+<div class="big_container">
+    <div><span class="dot"></span></div>
+    <div><span class="dot"></span></div>
+    <div><span class="dot"></span></div>
+    <div><span class="dot"></span></div>
+    <div><span class="dot"></span></div>
+    <div><span class="dot"></span></div>
+    <div><span class="dot"></span></div>
+    <div><span class="dot"></span></div>
+    <div><span class="dot"></span></div>
+    <div><span class="dot"></span></div>
+    <div><span class="dot"></span></div>
+    <div><span class="dot"></span></div>
+    <div><span class="dot"></span></div>
+    <div><span class="dot"></span></div>
+    <div><span class="dot"></span></div>  
+  </div>
+  
+
+
+
+  
+
+
+
+<div class="game-container">
+    <div class="column" id="column1">
+        <div class="item" draggable="true" ondragstart="drag(event)" id="item1">Act 1986</div>
+        <div class="item" draggable="true" ondragstart="drag(event)" id="item2">POSCO Act</div>
+        <div class="item" draggable="true" ondragstart="drag(event)" id="item3">Article 21-A</div>
+        <div class="item" draggable="true" ondragstart="drag(event)" id="item4">Section 376</div>
+        <div class="item" draggable="true" ondragstart="drag(event)" id="item5">Act no.60</div>
+    </div>
+
+    <div class="column" id="column2" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <div class="drop-target" id="target1" data-target="item1"> CHILD LABOUR</div>
+        <div class="drop-target" id="target2" data-target="item2"> SEXUAL ASSAULT</div>
+        <div class="drop-target" id="target3" data-target="item3"> RIGHT TO EDUCATION</div>
+        <div class="drop-target" id="target4" data-target="item4"> CHILD MARRAIGE</div>
+        <div class="drop-target" id="target5" data-target="item5"> CHILD PROTECTION </div>
+    </div>
+</div>
+
+<div id="score">Score: 0</div>
+<div id="win-message">Congratulations! You Have Match All The Rights!!!</div>
+<div id="lose-message">Oops! Not all Rights are matching!!</div>
+<button id="restart-button" onclick="restartGame()">Restart Game</button>
+
+ <!-- Adding animation of the random movement of the sea creatures -->
+ <div id="random"><img id="fish" src="ZfUY.gif" alt="Fish Image"></div>
+
+<script>
+    var score = 0;
+    var totalItems = 5;
+    
+
+    function allowDrop(ev) {
+        ev.preventDefault();
+    }
+
+    function drag(ev) {
+        ev.dataTransfer.setData("text", ev.target.id);
+    }
+
+    function drop(ev) {
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("text");
+        var draggedElement = document.getElementById(data);
+        var dropTarget = ev.target;
+
+        // Check if the drop target is a valid drop zone
+        if (dropTarget.classList.contains('drop-target')) {
+            dropTarget.appendChild(draggedElement);
+
+            // Check if the dropped item matches the target
+            if (dropTarget.getAttribute('data-target') === draggedElement.id) {
+                alert('Matched!');
+                score++;
+                updateScore();
+                draggedElement.classList.add('matched-item');
+                if (score === totalItems) {
+                    showWinMessage();
+                }
+            } else {
+                alert('Not matched. Try again.');
+                if (score < totalItems) {
+                    showLoseMessage();
+                }
+            }
+           
+          
+        }
+    }
+    function updateScore() {
+        document.getElementById('score').innerText = 'Score: ' + score;
+    }
+    function showWinMessage() {
+        document.getElementById('win-message').style.display = 'block';
+    }
+    function showLoseMessage() {
+        document.getElementById('lose-message').style.display = 'block';
+    }
+
+    function restartGame() {
+        // Reset game state
+        score = 0;
+        updateScore();
+        document.getElementById('win-message').style.display = 'none';
+        document.getElementById('lose-message').style.display = 'none';
+
+        // Remove the matched-item class from items
+        var items = document.querySelectorAll('.item');
+        items.forEach(function(item) {
+            item.classList.remove('matched-item');
+        });
+
+        // Move items back to the original column
+        var column1 = document.getElementById('column1');
+        items.forEach(function(item) {
+            column1.appendChild(item);
+        });
+    }
+
+
+
+
+
+
+
+    const fish = document.getElementById('fish');
+
+function getRandomPosition() {
+    const x = Math.random() * (window.innerWidth - fish.clientWidth);
+    const y = Math.random() * (window.innerHeight - fish.clientHeight);
+    return { x, y };
+}
+
+function moveFish() {
+    const currentPosition = { x: fish.offsetLeft, y: fish.offsetTop };
+    const newPosition = getRandomPosition();
+
+    const deltaX = newPosition.x - currentPosition.x;
+    const deltaY = newPosition.y - currentPosition.y;
+
+    const rotation = deltaX < 0 ? ' rotateY(180deg)' : ''; // Rotate only when moving in -X direction
+
+    fish.style.transform = `translate(${newPosition.x}px, ${newPosition.y}px)${rotation}`;
+}
+
+setInterval(moveFish, 10000); // Change the interval as needed
+moveFish(); // Initial placement
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

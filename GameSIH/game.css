@@ -1,0 +1,336 @@
+@import url("https://fonts.googleapis.com/css?family=Codystar:300&display=swap");
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Codystar";
+  background: black;
+  background-image: url('data:image/svg+xml,%3Csvg width="42" height="44" viewBox="0 0 42 44" xmlns="http://www.w3.org/2000/svg"%3E%3Cg id="Page-1" fill="none" fill-rule="evenodd"%3E%3Cg id="brick-wall" fill="%239C92AC" fill-opacity="0.4"%3E%3Cpath d="M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+}
+
+.neons {
+  margin-top: 10rem;
+  text-align: center;
+}
+
+.neons h1 {
+  font-size: 9rem;
+  text-align: center;
+  font-weight: bold;
+  -webkit-animation: glow 2s ease-in-out infinite alternate;
+  -moz-animation: glow 2s ease-in-out infinite alternate;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    color: #fff;
+    text-shadow: 0 0 10px #00fff2, 0 0 20px #00fff2, 0 0 30px #00fff2,
+      0 0 40px #00fff2, 0 0 50px #00fff2, 0 0 60px #00fff2, 0 0 70px #00fff2,
+      0 0 90px #00fff2;
+  }
+
+  to {
+    color: gray;
+    text-shadow: 0 0 20px #00fff2, 0 0 30px #00fff2, 0 0 40px #00fff2,
+      0 0 50px #00fff2, 0 0 60px #00fff2, 0 0 70px #00fff2, 0 0 80px #00fff2,
+      0 1 90px #00fff2;
+  }
+}
+
+em {
+  position: absolute;
+  left: 30px;
+  top: 150px;
+  font-size: 100px;
+}
+
+/* bubbles */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.big_container div {
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  animation: 4s linear infinite;
+}
+
+div .dot {
+  height: 10px;
+  width: 10px;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  top: 20%;
+  right: 20%;
+}
+
+.big_container div:nth-child(1) {
+  top: 20%;
+  left: 20%;
+  animation: animate 8s linear infinite;
+}
+
+.big_container div:nth-child(2) {
+  top: 60%;
+  left: 80%;
+  animation: animate 10s linear infinite;
+}
+
+.big_container div:nth-child(3) {
+  top: 40%;
+  left: 40%;
+  animation: animate 3s linear infinite;
+}
+
+.big_container div:nth-child(4) {
+  top: 66%;
+  left: 38%;
+  animation: animate 7s linear infinite;
+}
+
+.big_container div:nth-child(5) {
+  top: 30%;
+  left: 60%;
+  animation: animate 5s linear infinite;
+}
+.big_container div:nth-child(6) {
+  top: 90%;
+  left: 10%;
+  animation: animate 9s linear infinite;
+}
+.big_container div:nth-child(7) {
+  top: 70%;
+  left: 20%;
+  animation: animate 8s linear infinite;
+}
+.big_container div:nth-child(8) {
+  top: 75%;
+  left: 60%;
+  animation: animate 10s linear infinite;
+}
+.big_container div:nth-child(9) {
+  top: 50%;
+  left: 50%;
+  animation: animate 6s linear infinite;
+}
+.big_container div:nth-child(10) {
+  top: 10%;
+  left: 90%;
+  animation: animate 9s linear infinite;
+}
+.big_container div:nth-child(11) {
+  top: 45%;
+  left: 20%;
+  animation: animate 10s linear infinite;
+}
+.big_container div:nth-child(12) {
+  top: 20%;
+  left: 70%;
+  animation: animate 7s linear infinite;
+}
+.big_container div:nth-child(13) {
+  top: 60%;
+  left: 5%;
+  animation: animate 6s linear infinite;
+}
+.big_container div:nth-child(14) {
+  top: 90%;
+  left: 80%;
+  animation: animate 8s linear infinite;
+}
+.big_container div:nth-child(15) {
+  top: 10%;
+  left: 40%;
+  animation: animate 5s linear infinite;
+}
+
+.big_container div:nth-child(16) {
+  top: 80%;
+  left: 40%;
+  animation: animate 10s linear infinite;
+}
+
+.big_container div:nth-child(17) {
+  top: 80%;
+  left: 50%;
+  animation: animate 5s linear infinite;
+}
+
+.big_container div:nth-child(19) {
+  top: 60%;
+  left: 80%;
+  animation: animate 7s linear infinite;
+}
+
+.big_container div:nth-child(18) {
+  top: 50%;
+  left: 30%;
+  animation: animate 9s linear infinite;
+}
+
+.big_container div:nth-child(20) {
+  top: 40%;
+  left: 70%;
+  animation: animate 4s linear infinite;
+}
+.big_container div:nth-child(21) {
+  top: 10%;
+  left: 10%;
+  animation: animate 2s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: scale(0) translateY(0) rotate(70deg);
+  }
+  100% {
+    transform: scale(1.3) translateY(-100px) rotate(360deg);
+  }
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* bubbles and gradientr background end...*/
+.back {
+  position: absolute;
+  top: 10px;
+  left: 30px;
+
+  color: black;
+  cursor: pointer;
+  font-size: 28px;
+  border-radius: 8px;
+  background-color: rgb(8, 242, 246);
+  padding: 5px;
+  box-shadow: 3px 4px 6px rgb(0, 251, 255);
+}
+.back:hover {
+  border: 2px solid white;
+  transform: scale(1.1);
+  background-color: black;
+  color: white;
+}
+/* selection of game */
+.game-container {
+  height: 90%;
+  margin-top: 290px;
+  margin-left: 200px;
+  margin-right: 10px;
+  width: 100%;
+  /* border: 2px solid greenyellow; */
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 2fr 2fr;
+}
+.dibba {
+  box-shadow: 5px 6px 14px rgb(101, 224, 243);
+  border: 2px solid ;
+  border-radius: 12px;
+  height: 230px;
+  width: 250px;
+  margin: 20px;
+  cursor: pointer;
+  color: black;
+  font-weight: 1000;
+}
+.dibba:hover{
+  transform: scale(0.9);
+  box-shadow: 5px 4px 8px rgb(0, 221, 255);
+}
+
+.box1 {
+  background-color: #00fff2;
+  display: flex;
+  font-size: 3rem;
+  justify-content: center ;
+  align-items: center;
+
+}
+.box3 {
+  background-color: #00fff2;
+  display: flex;
+  font-size: 3rem;
+  justify-content: center ;
+  align-items: center;
+}
+.box5 {
+  background-color: #00fff2;
+  display: flex;
+  font-size: 3rem;
+  justify-content: center ;
+  align-items: center;
+}
+.box7 {
+  background-color: #00fff2;
+  display: flex;
+  font-size: 3rem;
+  justify-content: center ;
+  align-items: center;
+}
+.box9 {
+  background-color: #00fff2;
+  display: flex;
+  font-size: 3rem;
+  justify-content: center ;
+  align-items: center;
+}
+.box11 {
+  background-color: #00fff2;
+  display: flex;
+  font-size: 3rem;
+  justify-content: center ;
+  align-items: center;
+}
+.box2,
+.box8 {
+  font-size: 13rem;
+  text-align: center;
+  font-weight: bold;
+  -webkit-animation: glow 2s ease-in-out infinite alternate;
+  -moz-animation: glow 2s ease-in-out infinite alternate;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+.box4,
+.box6,
+.box10,.box12 {
+  font-size: 13rem;
+  text-align: center;
+  font-weight: bold;
+  -webkit-animation: glow 2s ease-in-out infinite alternate;
+  -moz-animation: glow 2s ease-in-out infinite alternate;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+.container{
+  margin-top: 210px;
+}
+#gamelink{
+  text-decoration: none;
+}
+
+a{
+  text-decoration: none;
+}
+/* .game-container div{
+  display: flex;
+  font-size: 3rem;
+  justify-content: center ;
+  align-items: center;
+} */
