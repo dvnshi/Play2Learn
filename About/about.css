@@ -16,6 +16,7 @@
   /* body{
     overflow: hidden;
   } */
+   
 /* hide scrollbar for chrome */
   body::-webkit-scrollbar{
     display: none;
