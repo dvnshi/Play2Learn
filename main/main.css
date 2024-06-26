@@ -405,6 +405,7 @@ h3 {
   margin-bottom: 2px;
 }
 .sh-box:hover {
+  /* background-color: pink; */
   transform: scale(1.1);
   cursor: pointer;
   color: rgb(85, 6, 113);
