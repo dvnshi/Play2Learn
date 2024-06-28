@@ -16,3 +16,9 @@ inputs.forEach((input) => {
   input.addEventListener("focus", focusFunc);
   input.addEventListener("blur", blurFunc);
 });
+
+// ================back button=================
+let btnBack = document.querySelector('button');
+btnBack.addEventListener('click', () => {
+    window.history.back();
+});
