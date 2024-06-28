@@ -18,3 +18,49 @@
     });
   });
  
+ document.querySelectorAll('.btn').forEach(card => {
+    card.addEventListener('mouseenter', () => {
+      const sound = document.getElementById('hover-sound');
+      sound.currentTime = 0; // Rewind to start
+      sound.play();
+    });
+  });
+
+   document.querySelectorAll('.link').forEach(card => {
+    card.addEventListener('mouseenter', () => {
+      const sound = document.getElementById('hover-sound');
+      sound.currentTime = 0; // Rewind to start
+      sound.play();
+    });
+  });
+
+  // module sound start
+
+   document.querySelectorAll('.items').forEach(card => {
+    card.addEventListener('mouseenter', () => {
+      const sound = document.getElementById('hover-sound');
+      sound.currentTime = 0; // Rewind to start
+      sound.play();
+    });
+  });
+
+    document.querySelectorAll('.uh-box').forEach(card => {
+    card.addEventListener('mouseenter', () => {
+      const sound = document.getElementById('hover-sound-nav');
+      sound.currentTime = 0; // Rewind to start
+      sound.play();
+    });
+  });
+
+  //module sound end
+
+  // module ke andar start button ke andar , ABOUT RIGHTS  start
+   document.querySelectorAll('.back-btn-bhai').forEach(card => {
+    card.addEventListener('mouseenter', () => {
+      const sound = document.getElementById('hover-sound');
+      sound.currentTime = 0; // Rewind to start
+      sound.play();
+    });
+  });
+    // module ke andar start button ke andar , ABOUT RIGHTS  end
+
