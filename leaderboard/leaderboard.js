@@ -28,6 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const backButton = document.querySelector('.back-button');
     backButton.addEventListener('click', () => {
         // Add your back navigation logic here
-        alert('Back button clicked!');
+        // alert('Back button clicked!');
     });
 });
