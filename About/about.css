@@ -31,6 +31,29 @@
     background-color: black;
   }
 
+  .button{
+    position: absolute;
+    z-index: 100;
+    display: flex;
+    top: 1rem;
+    left: 1rem;
+    background: transparent;
+    border: transparent;
+  }
+   .button img{
+    height: 35px;
+   }
+  
+   .button :hover{
+    cursor: pointer;
+   }
+  
+   button :active{
+    transform: translateX(-5px);
+    transition: 0.1s;
+   }
+   
+   
   .wrapped{
     position: relative;
     width: 100%;

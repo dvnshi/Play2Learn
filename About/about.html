@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="about.css">
 </head>
 <body>
+  <button class="button"><img src="back arrow_about.png"></button>
   <div class="cursor"></div>
   <section>
     <div class="wrapped">
@@ -163,6 +164,12 @@
 
         document.addEventListener('mouseleave', () => {
             cursor.style.display = 'none';
+        });
+
+        // ================back button=================
+        let btnBack = document.querySelector('button');
+        btnBack.addEventListener('click', () => {
+            window.history.back();
         });
     </script>
 </body>
