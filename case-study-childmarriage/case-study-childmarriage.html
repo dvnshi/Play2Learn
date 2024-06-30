@@ -44,16 +44,16 @@
 
     <div class="start-screen">
       <h3 class="start-text">Let's Dive Deeper in Real World Scenerio...</h3>
-      <button id="start-button">Case Study 1</button>
+      <button class="back-btn-bhai" id="start-button">Case Study 1</button>
       <br />
-      <button id="start-button">
+      <button class="back-btn-bhai" id="start-button">
         <a id="cs2" href="../case-study2-childmarriage/case-study2-child.html">Case Study 2</a>
       </button>
     </div>
     <div class="case1">
         In a small village, Pooja, a 14-year-old girl, faces the imminent risk of being forced into marriage by her family. Pooja dreams of completing her education and becoming a teacher, but her parents believe that early marriage is a cultural norm in their community. They are unaware of the legal consequences and the rights Pooja holds against child marriage.
 
- <button type="button" class="continue-btn">Continue...</button>
+ <button type="button" class="continue-btn back-btn-bhai">Continue...</button>
     </div>
 
     <div id="display-container">
@@ -70,12 +70,12 @@
       <div id="container">
         <!-- questions and options will be displayed here -->
       </div>
-      <button id="next-button">Next</button>
+      <button class="back-btn-bhai" id="next-button">Next</button>
     </div>
     <div class="score-container hide">
       <div id="user-score">Demo Score</div>
-      <button id="restart">Restart</button>
-      <button class="back-home">
+      <button class="back-btn-bhai" id="restart">Restart</button>
+      <button class="back-btn-bhai" class="back-home">
         <a
           style="text-decoration: none; color: black"
           href="../Module/mod_cm.html"
@@ -86,7 +86,11 @@
 
     <!-- animation cursor -->
     <div class="cursor"></div>
+<!-- sound for buttons -->
+<audio id="hover-sound" src="../Audio-sounds/navclick.wav" preload="auto"></audio>
+<!-- sound for buttons -->
 
+    <script src="../audio.js"></script>
     <script src="./case-study-childmarriage.js"></script>
   </body>
 </html>
