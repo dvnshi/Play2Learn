@@ -149,6 +149,7 @@ div .dot {
             transition: background-color 0.3s;
             position: absolute;
             left: 20px;
+            top: 1rem;
         }
 
         #backButton:hover {
@@ -182,7 +183,7 @@ div .dot {
             width: 100%;
             max-width: 200px;
             animation: upDown 2s infinite;
-            border: 3px solid #6a0dad;
+            /* border: 3px solid #6a0dad; */
             border-radius: 10px;
         }
 
