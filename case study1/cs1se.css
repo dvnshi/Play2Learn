@@ -156,6 +156,10 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+
+
+
+  background: linear-gradient(to top,#023e8a,#0077b6,#0096c7,#00b4d8,#48cae4,#90e0ef,#ade8f4,#caf0f8);
 }
 
 body {
@@ -477,4 +481,9 @@ opacity: 50%;
 .continue-btn:hover {
   transform: scale(1.1);
   box-shadow: 0px 4px 10px #4c213e;
+}
+
+#cs2 {
+  text-decoration: none;
+  color: black;
 }

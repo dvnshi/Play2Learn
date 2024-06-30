@@ -22,56 +22,57 @@ const quizArray = [
   {
     id: "0",
     question:
-      "Which fundamental right is central to Rahul's concern about the use of harmful pesticides in his village?",
+      " Which fundamental right is at the core of Anaya's concern about the factory's pollution?",
     options: [
-      "right to safe environment",
-      "right to equality",
-      "right to religion",
+      "Right to Education ",
+      "Right to Life and Personal Liberty      ",
+      "Right to Equality      ",
     ],
-    correct: "right to safe environment",
+    correct: "Right to Life and Personal Liberty",
   },
   {
     id: "1",
     question:
-      "Which constitutional article is often invoked to protect the right to a clean and safe environment?",
+      "Which constitutional article is often interpreted to include the right to a dignified life and a safe environment?",
     options: [
-      "Article 21",
+      "Article 21      ",
+      "Article 19      ",
       "Article 47",
-      "Article 19",
     ],
-    correct: "Article 47",
+    correct: "Article 21",
   },
   {
     id: "2",
     question:
-      "What steps can Rahul take to address the issue of harmful pesticide use in his village?",
+      " What role can Anaya play to address the issue of environmental pollution?",
     options: [
-      "Educate the community and promote sustainable farming practices",
-      " Turn a blind eye to avoid conflict",
-      "Confront the neighboring farmer personally",
+      "Ignore the situation to avoid conflict      ",
+      "Raise awareness and mobilize the community      ",
+      "Confront the factory owner personally      ",
     ],
-    correct: "Educate the community and promote sustainable farming practices",
+    correct: "Raise awareness and mobilize the community    ",
   },
   {
     id: "3",
     question:
-      "Which legal measures can Rahul explore to ensure the right to a safe environment for his community?",
+      "Which legal measures can Anaya explore to protect the community's right to a safe environment?",
     options: [
-      "Seek assistance from local authorities",
-      "Ignore the issue and hope for the best",
-      "Encourage the community to relocate",
+      "Seek assistance from local authorities      ",
+      " Ignore the issue and hope it resolves on its own      ",
+      "Convince the community to relocate      ",
     ],
-    correct: "Seek assistance from local authorities",
+    correct: "Seek assistance from local authorities    ",
   },
   // {
   //   id: "4",
-  //   question: "What does a balanced approach to education entail for Aarav?",
+  //   question:
+  //     "How can the local community contribute to improving Priya's educational experience?",
   //   options: [
-  //     "Focusing solely on academic achievements",
-  //     "Ignoring extracurricular activities",
-  //     "Balancing academics with hobbies and relaxation",
+  //     "By avoiding discussions about education",
+  //     " By organizing community study sessions",
+  //     " By isolating Priya from community events",
   //   ],
-  //   correct: "Balancing academics with hobbies and relaxation",
+  //   correct: " By organizing community study sessions",
   // },
 ];
 //display casestrudy scene
