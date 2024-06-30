@@ -64,3 +64,12 @@
   });
     // module ke andar start button ke andar , ABOUT RIGHTS  end
 
+// module -> quiz
+   document.querySelectorAll('.btn-for-sound').forEach(card => {
+    card.addEventListener('mouseenter', () => {
+      const sound = document.getElementById('hover-sound');
+      sound.currentTime = 0; // Rewind to start
+      sound.play();
+    });
+  });
+// module -> quiz
