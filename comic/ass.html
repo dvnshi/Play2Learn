@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        #assistant-container {
+            text-align: center;
+        }
+
+        #output {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #333;
+            width: 300px;
+            display: inline-block;
+        }
+    </style>
+    <title>Voice Assistant Example</title>
+</head>
+<body>
+    <div id="assistant-container">
+        <h1>Voice Assistant</h1>
+        <button onclick="startAssistant()">Start Listening</button>
+        <button onclick="stopAssistant()">Stop Listening</button>
+        <div id="output"></div>
+    </div>
+
+    <script>
+        const outputElement = document.getElementById('output');
+
+        // Check for browser support
+        if ('SpeechRecognition' in window || 'webkitSpeechRecognition' in window) {
+            const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+
+            recognition.lang = 'en-US';
+            recognition.interimResults = true;
+
+            recognition.onstart = function() {
+                outputElement.textContent = 'Listening...';
+            };
+
+            recognition.onresult = function(event) {
+                const transcript = event.results[0][0].transcript;
+                outputElement.textContent = transcript;
+            };
+
+            recognition.onend = function() {
+                outputElement.textContent += '\nSpeech recognition stopped.';
+            };
+
+            function startAssistant() {
+                recognition.start();
+            }
+
+            function stopAssistant() {
+                recognition.stop();
+            }
+        } else {
+            outputElement.textContent = 'Speech recognition is not supported in this browser.';
+        }
+    </script>
+</body>
+</html>
+

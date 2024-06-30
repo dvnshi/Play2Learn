@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        #assistant-container {
+            text-align: center;
+        }
+
+        #output {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #333;
+            width: 300px;
+            display: inline-block;
+        }
+
+        .highlight {
+            background-color: yellow;
+            font-weight: bold;
+        }
+    </style>
+    <title>Voice Assistant Example</title>
+</head>
+<body>
+    <div id="assistant-container">
+        <h1>Voice Assistant</h1>
+        <button onclick="startAssistant()">Start Listening</button>
+        <button onclick="stopAssistant()">Stop Listening</button>
+        <div id="output"></div>
+    </div>
+
+    <!-- Add a paragraph for searching -->
+    <p id="searchParagraph">
+        This is a sample paragraph. You can search for specific words within this paragraph using the voice assistant.
+    </p>
+
+    <script>
+        const outputElement = document.getElementById('output');
+
+        // Check for browser support
+        if ('SpeechRecognition' in window || 'webkitSpeechRecognition' in window) {
+            const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+
+            recognition.lang = 'en-US';
+            recognition.interimResults = true;
+
+            recognition.onstart = function() {
+                outputElement.textContent = 'Listening...';
+            };
+
+            recognition.onresult = function(event) {
+                const transcript = event.results[0][0].transcript.toLowerCase();
+                outputElement.textContent = transcript;
+
+                // Check if the transcript contains a search command
+                if (transcript.includes('search for')) {
+                    const searchWord = transcript.replace('search for', '').trim();
+                    searchOnParagraph(searchWord);
+                }
+            };
+
+            recognition.onend = function() {
+                outputElement.textContent += '\nSpeech recognition stopped.';
+            };
+
+            function startAssistant() {
+                recognition.start();
+            }
+
+            function stopAssistant() {
+                recognition.stop();
+            }
+
+            function searchOnParagraph(word) {
+                const paragraph = document.getElementById('searchParagraph');
+                const paragraphText = paragraph.textContent.toLowerCase();
+
+                // Remove previous highlights
+                paragraph.innerHTML = paragraphText;
+
+                if (paragraphText.includes(word)) {
+                    const regex = new RegExp(word, 'gi');
+                    paragraph.innerHTML = paragraphText.replace(regex, match => `<span class="highlight">${match}</span>`);
+                    alert(`Found: ${word}`);
+                } else {
+                    alert(`Not Found: ${word}`);
+                }
+            }
+        } else {
+            outputElement.textContent = 'Speech recognition is not supported in this browser.';
+        }
+    </script>
+</body>
+</html>

@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="about.css">
 </head>
 <body>
+  <button class="button"><img src="back arrow_about.png"></button>
+  <div class="cursor"></div>
   <section>
     <div class="wrapped">
         <header class="heading">
@@ -144,5 +146,32 @@
     <div class="wave wave3"></div>
     <div class="wave wave4"></div>
     </footer>
+
+
+
+
+     <script>
+        // JavaScript to make the cursor follow the mouse
+        const cursor = document.querySelector('.cursor');
+
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = `${e.clientX}px`;
+            cursor.style.top = `${e.clientY}px`;
+        });
+
+        document.addEventListener('mouseenter', () => {
+            cursor.style.display = 'block';
+        });
+
+        document.addEventListener('mouseleave', () => {
+            cursor.style.display = 'none';
+        });
+
+        // ================back button=================
+        let btnBack = document.querySelector('button');
+        btnBack.addEventListener('click', () => {
+            window.history.back();
+        });
+    </script>
 </body>
 </html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon1.0.png">
+
+
+    <link rel="stylesheet" href="./storycm.css">
+</head>
+<body>
+
+
+    
+	<div class="big_container">
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>  
+    </div>
+
+
+    <!-- add language feature to the page -->
+    <div id ="google_element"> </div>
+    <script src ="https://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+   <script> function loadGoogleTranslate(){
+        new google.translate.TranslateElement("google_element");
+    }
+    </script>
+
+
+
+
+    <div class="heading">
+         <a href="../Module/mod_edu.html"><button class="back-button"><i class="bi bi-arrow-left"></i></button></a>
+        <span id="right"> </span>
+            <span class="random-letters">
+            <span>Education</span>
+            <!-- <span>    </span> -->
+            <span>is  </span>
+            <!-- <span> </span> -->
+            <span>Important</span>
+            <!-- <span>T</span>
+            <span>I</span>
+            <span>O</span>
+            <span>N</span> -->
+        </span>
+          </div>
+          <audio id="myAudio">
+            <source src="SIH_Sound.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+        
+        <button onclick="toggleSound()" style="background-color: rgb(7, 7, 66); color: aliceblue; padding: 8px; border-radius: 5px; font-size: 20px; margin-top: 20px; ">Play/Pause Sound</button>
+        
+        <script>
+            function toggleSound() {
+                var audio = document.getElementById('myAudio');
+                if (audio) {
+                    if (audio.paused) {
+                        audio.play();
+                    } else {
+                        audio.pause();
+                    }
+                }
+            }
+        </script>
+          <div class="content_body">
+            <!-- <div class="container">
+                <div class="octopus"><img src="./octopusss.png"></div>
+            </div> -->
+
+
+            <div id="content">
+               <p> Once upon a time in the colorful land of Happyville, there lived a cheerful and curious little girl named Lily. Lily loved exploring and discovering new things, but there was one thing that made her heart flutter with excitement – the Right to Education Forest.
+
+In this magical forest, every child had the right to embark on an enchanting journey of learning. The trees were giant books, and the birds sang melodies of wisdom. One sunny day, Lily decided to take a stroll through the Right to Education Forest.</p><br>
+
+<p>
+As she skipped along the path, she encountered a wise old owl named Professor Hoots-a-Lot. Professor Hoots-a-Lot had a magical chalkboard that could answer any question a child had about their right to education.
+
+"Hello, Lily! Welcome to the Right to Education Forest. Here, every child has the right to learn and grow," said Professor Hoots-a-Lot.</p><br>
+<p>
+
+Lily's eyes sparkled with curiosity as she asked, "What is the Right to Education, Professor?"</p><p>
+
+The wise owl smiled and explained, "The Right to Education is a magical spell that ensures every child, no matter who they are or where they come from, has the opportunity to go to school and learn amazing things. It's like a key that opens the door to a world of knowledge and dreams."
+
+In the heart of the forest, Lily found a school made of candy canes and rainbow-colored books. The teachers were friendly animals who loved sharing their wisdom. Lily eagerly joined the classroom, where she learned about numbers, letters, and the wonders of the world.
+
+With each lesson, Lily felt the power of the Right to Education growing within her. She realized that every child deserved the chance to explore, ask questions, and dream big dreams.</p><p>
+    As Lily continued her journey through the magical forest, she met friends from different backgrounds, all eager to learn and play together. The Right to Education Forest taught Lily that education was not just a right but a joyous adventure that united children in friendship and knowledge.
+
+And so, with a heart full of wisdom and a backpack of dreams, Lily continued her journey through the Right to Education Forest, spreading the magic of learning to every corner of Happyville.
+</p><br><p>
+And they all lived happily and learned together, for in the Right to Education Forest, every child's story was a tale of joy, curiosity, and the boundless possibilities of knowledge.</p>
+
+
+            </div>
+
+          </div>
+
+<!-- <div id="go_back">
+            <button class="next-but" style="background-color: rgb(231, 222, 222); ; text-decoration: none;color: white;box-shadow: 0 0 20px rgb(255, 255, 255);">  <a href="../pageo/index.html">NEXT</a> </button>
+            </div>  -->.
+
+
+<!-- ADDING SOUNDS TO THE WEB-PAGE -->
+<!-- <audio id="backgroundSound" loop>
+    <source src="SIH_Sound.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+</audio> -->
+<!-- adding sound by dj -->
+<!-- <audio controls autoplay  loop>
+    <source src="SIH_Sound.mp3" type="audio/ogg">
+    <source src="SIH_Sound.mp3" type="audio/mpeg">
+  </audio> -->
+
+
+
+
+    <!-- Adding animation of the random movement of the sea creatures -->
+<div id="random"><img id="fish" src="Starfish1.gif" alt="Fish Image"></div>
+
+
+
+<script src="story.js"> </script>
+
+
+</body>
+</html>

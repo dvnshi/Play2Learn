@@ -168,6 +168,31 @@ h1{
   background-color: var(--second-color);
 }
 
+.back_button{
+  position: absolute;
+  z-index: 100;
+  display: flex;
+  top: 1.5rem;
+  left: 1.5rem;
+  background: transparent;
+  border: transparent;
+  color: #29B3E0;
+  font-size: 1.5rem;
+}
+
+.back_button img{
+  height: 28px;
+}
+
+.back_button :hover{
+  cursor: pointer;
+ }
+
+ button :active{
+  transform: translateX(-5px);
+  transition: 0.2s;
+ }
+
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
 @media screen and (max-width: 320px) {

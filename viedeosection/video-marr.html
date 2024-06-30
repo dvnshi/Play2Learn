@@ -3,9 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Video Sction Right Against Child Marriage</title>
+    <link href="./video.css" rel="stylesheet">
 </head>
 <body>
-    <video src="../sih-viedeos/video-marriage.mp4" width="100%" controls poster="./viedeo-thumbnail/child-marriage.png" preload="auto"></video>
+
+    <div class="big_container">
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>  
+    </div>
+
+    <header>
+        <a href="../Module/mod_cm.html"><button id="backButton">&#x2190;</button></a>
+        <h1>Right Against Child Marriage</h1>
+    </header>
+    <div class="container">
+        <div class="left-section">
+            <img src="../sih-gif/2octo.gif" alt="Educational Image" class="animated-image">
+
+        </div>
+        <div class="main-section">
+            <video poster="./viedeo-thumbnail/child-marriage.png" preload="auto" controls>  
+                <source src="../video-content/child-marriage.mp4" controls preload="auto">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('backButton').addEventListener('click', function() {
+            window.location.href = 'modulepage.html'; // Change this to the actual module page URL
+        });
+    </script>
 </body>
 </html>

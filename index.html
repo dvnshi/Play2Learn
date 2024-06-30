@@ -38,7 +38,7 @@
 
     <div id="header">
         <div id="octo" class="octo animate_animated animate_jello">
-            <img src="sih-images\purana-logo.png" alt="Logo">
+            <img src="sih-images\purana-logo.png" alt="Logo" height="100px">
         </div>
 
         <aside>
@@ -89,13 +89,18 @@
             <div id="fun">
                 <span id="learnText">THE FREE, FUN<br> AND INTERACTIVE <br>WAYS TO LEARN </br>YOUR LAWS.</span>
             </div>
-            <div id="button1"><a href="main\main.html"><span id="main\main.html">GET STARTED</span></a></div> 
-            <div id="button2"><a href="./signUpPage/SignUpPage.html"><span id="accountText">I ALREADY HAVE AN ACCOUNT</span></a></div>   
+            <div class="main-but" id="button1"><a href="main\main.html"><span id="main\main.html">GET STARTED</span></a></div> 
+            <div class="main-but" id="button2"><a href="./signUpPage/SignUpPage.html"><span id="accountText">I ALREADY HAVE AN ACCOUNT</span></a></div>   
             </div>
         </div>
     </div>
 
+    <!-- sound for buttons -->
+  <audio id="hover-sound" src="./Audio-sounds/button.wav" preload="auto"></audio>
+    <!-- sound for buttons -->
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"></script>
     <script src="./index.js"></script>
+    <script src="./audio.js"></script>
 </body>
 </html>

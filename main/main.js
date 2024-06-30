@@ -191,20 +191,40 @@ sendChatBtn.addEventListener("click", handleChat);
 closeBtn.addEventListener("click", () => document.body.classList.remove("show-chatbot"));
 chatbotToggler.addEventListener("click", () => document.body.classList.toggle("show-chatbot"));
 
-// adding sounds to the navbar options 
-        // Select all sh-box elements
-        // const shBoxes = document.querySelectorAll('.sh-box');
+// // adding sounds to the navbar options 
 
-        // // Add click event listener to each sh-box
-        // shBoxes.forEach(box => {
-        //     box.addEventListener('click', () => {
-        //         const audio = box.querySelector('audio');
-        //         const href = box.getAttribute('data-href');
+//   document.querySelectorAll('.flip-card').forEach(card => {
+//     card.addEventListener('mouseenter', () => {
+//       const sound = document.getElementById('hover-sound');
+//       sound.currentTime = 0; // Rewind to start
+//       sound.play();
+//     });
+//   });
 
-        //         audio.play();
+//   document.querySelectorAll('.uh-box').forEach(card => {
+//     card.addEventListener('mouseenter', () => {
+//       const sound = document.getElementById('hover-sound-nav');
+//       sound.currentTime = 0; // Rewind to start
+//       sound.play();
+//     });
+//   });
 
-        //         audio.onended = () => {
-        //             window.location.href = href;
-        //         };
-        //     });
-        // });
+//   document.querySelectorAll('.sh-box').forEach(card => {
+//     card.addEventListener('mouseenter', () => {
+//       const sound = document.getElementById('hover-sound-nav');
+//       sound.currentTime = 0; // Rewind to start
+//       sound.play();
+//     });
+//   });
+
+//     document.querySelectorAll('.logo').forEach(card => {
+//     card.addEventListener('mouseenter', () => {
+//       const sound = document.getElementById('hover-sound-nav');
+//       sound.currentTime = 0; // Rewind to start
+//       sound.play();
+//     });
+//   });
+
+
+
+  

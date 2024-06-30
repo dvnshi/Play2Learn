@@ -4,6 +4,16 @@
   padding: 0;
 }
 
+/* hide scrollbar for chrome */
+body::-webkit-scrollbar{
+  display: none;
+}
+
+/* hide scrollbar for firefox */
+body::-webkit-scrollbar{
+  scrollbar-width: none;
+}
+
 .big_container div {
   border-radius: 50%;
   height: 60px;
@@ -395,6 +405,7 @@ h3 {
   margin-bottom: 2px;
 }
 .sh-box:hover {
+  /* background-color: pink; */
   transform: scale(1.1);
   cursor: pointer;
   color: rgb(85, 6, 113);
@@ -618,21 +629,23 @@ font-size: 20px;
   opacity: 50%;
 }
 
-
+/* ======================================CHATBOT===================== */
 /* chatbot */
 
 
-/* Import Google font - Poppins
+/* Import Google font - Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-}
-body {
+} */
+
+/* body {
   background: whitesmoke;
 } */
+
 .chatbot-toggler {
   position: fixed;
   bottom: 30px;
@@ -664,6 +677,7 @@ body.show-chatbot .chatbot-toggler span:last-child {
   opacity: 1;
 }
 .chatbot {
+  font-family: "Poppins", sans-serif;
   position: fixed;
   right: 35px;
   bottom: 90px;
@@ -707,10 +721,11 @@ body.show-chatbot .chatbot {
 }
 header h2 {
   font-size: 1.3rem;
+  font-weight: 500;
 }
 .chatbot .chatbox {
   overflow-y: auto;
-  height: 250px;
+  height: 120px;
   padding: 30px 20px 100px;
 }
 .chatbot :where(.chatbox, textarea)::-webkit-scrollbar {
@@ -769,26 +784,24 @@ header h2 {
   gap: 5px;
   position: absolute;
   bottom: 0;
-  width: 100%;
-  /* height: 15%; */
+  width: 90%;
+  height: 15%;
   background: #3c096c;
-  
-
   padding: 3px 20px;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid #3c096c;
 }
 .chat-input textarea {
+  font-family: "Poppins", sans-serif;
   height: 55px;
   width: 100%;
   border: none;
   outline: none;
   resize: none;
-  max-height: 180px;
+  max-height: 100px;
   padding: 15px 15px 15px 0;
   font-size: 0.95rem;
   background: #3c096c;
   /* background: #827290; */
-
   color: #fff;
 }
 .chat-input span {

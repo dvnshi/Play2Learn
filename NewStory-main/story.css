@@ -1,0 +1,373 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+body{
+	/* background-color: #c6c4fe; */
+    /* background: linear-gradient(180deg, #f0f0f0, 10%, #e1dbee, 70%, #8B5FE3); */
+    /* background: linear-gradient(to top,#023e8a,#0077b6,#0096c7,#00b4d8,#48cae4,#90e0ef,#ade8f4,#caf0f8); */
+    background: linear-gradient(180deg, #e1dbee, 20%, #5fdae3, 60%,#3398e4,100%,#178de8);
+}
+
+
+.big_container div{
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    animation: 4s linear infinite;
+
+}
+
+div .dot {
+    height: 10px;
+    width: 10px;
+    border-radius: 50px;
+    background: rgba(184, 184, 184, 0.5);
+    position: absolute;
+    top: 20%;
+    right: 20%;
+  }
+
+  .big_container div:nth-child(1) {
+    top: 20%;
+    left: 20%;
+    animation: animate 8s linear infinite;
+  }
+
+  .big_container div:nth-child(2) {
+    top: 60%;
+    left: 80%;
+    animation: animate 10s linear infinite;
+  }
+
+  .big_container div:nth-child(3) {
+    top: 40%;
+    left: 40%;
+    animation: animate 3s linear infinite;
+  }
+
+  .big_container div:nth-child(4) {
+    top: 66%;
+    left: 38%;
+    animation: animate 7s linear infinite;
+  }
+
+  .big_container div:nth-child(5) {
+    top: 30%;
+    left: 60%;
+    animation: animate 5s linear infinite;
+  }
+  .big_container div:nth-child(6) {
+    top: 90%;
+    left: 10%;
+    animation: animate 9s linear infinite;
+  }
+  .big_container div:nth-child(7) {
+    top: 70%;
+    left: 20%;
+    animation: animate 8s linear infinite;
+  }
+  .big_container div:nth-child(8) {
+    top: 75%;
+    left: 60%;
+    animation: animate 10s linear infinite;
+  }
+  .big_container div:nth-child(9) {
+    top: 50%;
+    left: 50%;
+    animation: animate 6s linear infinite;
+  }
+  .big_container div:nth-child(10) {
+    top: 10%;
+    left: 90%;
+    animation: animate 9s linear infinite;
+  }
+  .big_container div:nth-child(11) {
+    top: 45%;
+    left: 20%;
+    animation: animate 10s linear infinite;
+  }
+  .big_container div:nth-child(12) {
+    top: 20%;
+    left: 70%;
+    animation: animate 7s linear infinite;
+  }
+  .big_container div:nth-child(13) {
+    top: 60%;
+    left: 5%;
+    animation: animate 6s linear infinite;
+  }
+  .big_container div:nth-child(14) {
+    top: 90%;
+    left: 80%;
+    animation: animate 8s linear infinite;
+  }
+  .big_container div:nth-child(15) {
+    top: 10%;
+    left: 40%;
+    animation: animate 5s linear infinite;
+  }
+
+
+@keyframes animate{
+    0%{
+         transform: scale(0) translateY(0) rotate(70deg);
+    }
+    100%{
+        transform: scale(1.3) translateY(-100px) rotate(360deg);
+    }
+}
+
+
+
+
+
+
+body{
+	background-color: #c6c4fe;
+}
+
+html,body{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+}
+
+
+.heading{
+  text-align: center;
+  letter-spacing: 3px;
+  z-index: -50;
+  color: black;
+  background-color: rgb(215, 165, 220);
+  border: 3px solid #6910bb;
+}
+
+#right{
+  font-size: 2rem;
+  font-family: sans-serif;
+  font-weight: 200;
+}
+
+
+.random-letters{
+  font-size: 3rem;
+  font-family: cursive;
+  font-weight: 200;
+  color: #5a0ea2;
+  letter-spacing: -4px;
+}
+.random-letters span {
+  display: inline-block;
+  /* animation: randomColor,randomScale  2s infinite alternate; */
+  /* animation: randomScale 2s infinite alternate; */
+
+}
+@keyframes randomColor {
+  0% { color: red; }
+  25% { color: blue; }
+  50% { color: green; }
+  75% { color: orange; }
+  100% { color: purple; }
+}
+/* @keyframes randomScale {
+  0% { transform: scale(1); }
+  25% { transform: scale(1.2); }
+  50% { transform: scale(0.8); }
+  75% { transform: scale(1.4); }
+  100% { transform: scale(1); }
+} */
+
+
+
+/* css */
+  /* Copy code */
+  /* Define the container division */
+  .container {
+  position: relative;
+  width: 250px;
+  height: 500px;
+  position: relative;
+  top: 100%;
+  overflow: hidden;
+  border: 2px solid rgb(19, 5, 22);
+  background-color: cyan;
+  }
+  
+  /* Define the octopus element */
+  .octopus {
+  width: 200px;
+  height: 1000px;/* You can change the color */
+  position: absolute;
+  animation: upDown 5s ease-in-out infinite; 
+  }
+  .octopus img{
+    width: 200px;
+  height: 200px;
+  }
+  
+  
+
+  #content{
+    height: 75vh;
+    width: 80vw;
+    margin-left: 20%;
+    margin-top: 2%;
+    /* border: 3px solid black; */
+    font-family: cursive;
+    font-size: 1.5rem;
+    word-spacing: 10px;
+    text-align: center;
+    padding: 30px;
+    color:black;
+  }
+
+  @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+  *{
+    margin: 0;
+    padding: 0;
+  
+  }
+  
+  .big_container div{
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    animation: 4s linear infinite;
+  
+  }
+  
+  div .dot {
+    height: 10px;
+    width: 10px;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    top: 20%;
+    right: 20%;
+  }
+  
+  .big_container div:nth-child(1) {
+    top: 20%;
+    left: 20%;
+    animation: animate 8s linear infinite;
+  }
+  
+  .big_container div:nth-child(2) {
+    top: 60%;
+    left: 80%;
+    animation: animate 10s linear infinite;
+  }
+  
+  .big_container div:nth-child(3) {
+    top: 40%;
+    left: 40%;
+    animation: animate 3s linear infinite;
+  }
+  
+  .big_container div:nth-child(4) {
+    top: 66%;
+    left: 38%;
+    animation: animate 7s linear infinite;
+  }
+  
+  .big_container div:nth-child(5) {
+    top: 30%;
+    left: 60%;
+    animation: animate 5s linear infinite;
+  }
+  .big_container div:nth-child(6) {
+    top: 90%;
+    left: 10%;
+    animation: animate 9s linear infinite;
+  }
+  .big_container div:nth-child(7) {
+    top: 70%;
+    left: 20%;
+    animation: animate 8s linear infinite;
+  }
+  .big_container div:nth-child(8) {
+    top: 75%;
+    left: 60%;
+    animation: animate 10s linear infinite;
+  }
+  .big_container div:nth-child(9) {
+    top: 50%;
+    left: 50%;
+    animation: animate 6s linear infinite;
+  }
+  .big_container div:nth-child(10) {
+    top: 10%;
+    left: 90%;
+    animation: animate 9s linear infinite;
+  }
+  .big_container div:nth-child(11) {
+    top: 45%;
+    left: 20%;
+    animation: animate 10s linear infinite;
+  }
+  .big_container div:nth-child(12) {
+    top: 20%;
+    left: 70%;
+    animation: animate 7s linear infinite;
+  }
+  .big_container div:nth-child(13) {
+    top: 60%;
+    left: 5%;
+    animation: animate 6s linear infinite;
+  }
+  .big_container div:nth-child(14) {
+    top: 90%;
+    left: 80%;
+    animation: animate 8s linear infinite;
+  }
+  .big_container div:nth-child(15) {
+    top: 10%;
+    left: 40%;
+    animation: animate 5s linear infinite;
+  }
+  
+  
+  @keyframes animate{
+    0%{
+         transform: scale(0) translateY(0) rotate(70deg);
+    }
+    100%{
+        transform: scale(1.3) translateY(-100px) rotate(360deg);
+    }
+  }
+  
+  
+  /* body{
+  background-color: #c6c4fe;
+    background: linear-gradient(180deg, #f0f0f0, 10%, #e1dbee, 70%, #8B5FE3);
+  } */
+  /* Adding animation of the random movement of the sea creatures */
+#random{
+  position: absolute;
+  top: 0px;
+  z-index: -10;
+}
+#fish {
+  width: 300px;
+  height: 240px;
+  transition: transform 10s ease-in-out;
+  transform: rotateX(30deg);
+}
+img{
+
+}
+
